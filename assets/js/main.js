@@ -20,6 +20,15 @@ window.SITE = {
   var bookAttrs = S.calendly ? ' target="_blank" rel="noopener"' : "";
 
   var header = document.getElementById("site-header");
+  if (header && !document.querySelector(".skip")) {
+    var first = document.querySelector("section");
+    if (first) {
+      if (!first.id) first.id = "main";
+      var skip = document.createElement("a");
+      skip.className = "skip"; skip.href = "#" + first.id; skip.textContent = "Skip to content";
+      document.body.insertBefore(skip, header);
+    }
+  }
   if (header) {
     header.className = "site-header" + (document.body.dataset.solid ? " solid" : "");
     header.innerHTML =
