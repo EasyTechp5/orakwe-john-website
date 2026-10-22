@@ -63,6 +63,41 @@ window.SITE = {
     if (S.calendly) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); }
   });
 
+
+  /* scroll progress */
+  var pg = document.createElement("div"); pg.className = "progress"; pg.setAttribute("aria-hidden", "true");
+  document.body.prepend(pg);
+  var ticking = false;
+  function prog() {
+    var h = document.documentElement.scrollHeight - innerHeight;
+    pg.style.transform = "scaleX(" + (h > 0 ? Math.min(1, scrollY / h) : 0) + ")"; ticking = false;
+  }
+  addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(prog); } }, { passive: true });
+
+  /* card spotlight */
+  document.addEventListener("pointermove", function (e) {
+    var c = e.target.closest && e.target.closest(".card");
+    if (!c) return;
+    var r = c.getBoundingClientRect();
+    c.style.setProperty("--mx", (e.clientX - r.left) + "px"); c.style.setProperty("--my", (e.clientY - r.top) + "px");
+  }, { passive: true });
+
+  /* typewriter */
+  var tw = document.querySelector("[data-type]");
+  if (tw) {
+    var text = tw.dataset.type;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { tw.textContent = text; }
+    else {
+      tw.innerHTML = '<span class="sr-only"></span><span class="tw-ghost" aria-hidden="true"></span><span class="tw-live" aria-hidden="true"></span>';
+      tw.children[0].textContent = text; tw.children[1].textContent = text;
+      var live = tw.children[2], i = 0;
+      setTimeout(function type() {
+        live.textContent = text.slice(0, ++i);
+        if (i < text.length) setTimeout(type, 26 + Math.random() * 30); else tw.classList.add("done");
+      }, 700);
+    }
+  }
+
   /* reveal on scroll */
   var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
