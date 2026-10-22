@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact and book a discovery call | Orakwe John, MBA</title>
+<meta name="description" content="Book a discovery conversation or send a structured enquiry about AI programmes, workshops, speaking and advisory.">
+<meta name="theme-color" content="#071a4d"><link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head><body>
+<header id="site-header"></header>
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Contact</span><h1>Start with a discovery conversation.</h1><p class="lead">Tell me about your institution. You will hear back within two working days.</p></div></section>
+
+<section class="section" id="enquiry">
+  <div class="wrap grid-2" style="align-items:start">
+    <div class="reveal">
+      <h2>What to expect</h2>
+      <ul class="list"><li><b>30 minutes.</b> Your goals, your tools, your constraints.</li><li><b>A clear next step.</b> Audit, workshop, briefing or a candid “not yet”.</li><li><b>No jargon.</b> Written and spoken for executives.</li></ul>
+      <div class="card" style="margin-top:32px"><h3>Prefer LinkedIn?</h3><p>Message directly or follow for daily insights.</p><span class="meta"><a href="https://www.linkedin.com/in/orakwe" target="_blank" rel="noopener">linkedin.com/in/orakwe →</a></span></div>
+      <p class="note" style="margin-top:20px">Individual career advice or free consulting? Please follow the newsletter and LinkedIn posts instead of using this form.</p>
+    </div>
+    <form class="form reveal d1" id="enquiry-form" novalidate></form>
+  </div>
+</section>
+
+<section class="section dark" id="newsletter"><div class="wrap center reveal"><span class="eyebrow">Newsletter</span><h2>Frameworks and weekly thinking, in your inbox.</h2><form class="news" id="news" style="margin:26px auto 0"><input type="email" required placeholder="you@organisation.com" aria-label="Email address"><button class="btn btn-primary" type="submit">Subscribe</button></form></div></section>
+<footer id="site-footer"></footer>
+<script>
+/* build the form here so the id used by main.js is stable */
+document.getElementById("enquiry-form").outerHTML = '<form class="form reveal d1" id="enquiry">' +
+'<div class="two"><label>Your name<input name="name" required autocomplete="name"></label><label>Work email<input type="email" name="email" required autocomplete="email"></label></div>' +
+'<div class="two"><label>Organisation<input name="org" required autocomplete="organization"></label><label>Your role<input name="role" autocomplete="organization-title"></label></div>' +
+'<div class="two"><label>Organisation type<select name="type"><option>Central bank</option><option>Ministry or government</option><option>Bank or insurer</option><option>Accelerator or ecosystem</option><option>University or institute</option><option>Event or media</option><option>Other</option></select></label>' +
+'<label>I am interested in<select name="interest"><option>AI Opportunity Audit</option><option>Executive briefing</option><option>Workshop or training</option><option>Adoption programme</option><option>Governance and security track</option><option>Speaking or panel</option><option>Advisory retainer</option></select></label></div>' +
+'<div class="two"><label>People involved<select name="size"><option>Under 25</option><option>25 to 100</option><option>100 to 500</option><option>500+</option></select></label>' +
+'<label>Timeline<select name="timeline"><option>Within 1 month</option><option>1 to 3 months</option><option>3 to 6 months</option><option>Exploring</option></select></label></div>' +
+'<label>What do you want to achieve?<textarea name="message" required></textarea></label>' +
+'<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+'<button class="btn btn-primary" type="submit">Send enquiry →</button><div class="status" id="status" role="status"></div><p class="note">Your details are used only to respond to this enquiry.</p></form>';
+</script>
+<script src="assets/js/main.js"></script></body></html>
