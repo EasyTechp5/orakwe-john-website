@@ -19,7 +19,7 @@
       <div class="card" style="margin-top:32px"><h3>Prefer LinkedIn?</h3><p>Message directly or follow for daily insights.</p><span class="meta"><a href="https://www.linkedin.com/in/orakwe" target="_blank" rel="noopener">linkedin.com/in/orakwe →</a></span></div>
       <p class="note" style="margin-top:20px">Individual career advice or free consulting? Please follow the newsletter and LinkedIn posts instead of using this form.</p>
     </div>
-    <form class="form reveal d1" id="enquiry-form" novalidate></form>
+    <form class="form reveal d1" id="enquiry-form"></form>
   </div>
 </section>
 
@@ -27,7 +27,7 @@
 <footer id="site-footer"></footer>
 <script>
 /* build the form here so the id used by main.js is stable */
-document.getElementById("enquiry-form").outerHTML = '<form class="form reveal d1" id="enquiry">' +
+document.getElementById("enquiry-form").outerHTML = '<form class="form reveal d1" id="enquiry-form">' +
 '<div class="two"><label>Your name<input name="name" required autocomplete="name"></label><label>Work email<input type="email" name="email" required autocomplete="email"></label></div>' +
 '<div class="two"><label>Organisation<input name="org" required autocomplete="organization"></label><label>Your role<input name="role" autocomplete="organization-title"></label></div>' +
 '<div class="two"><label>Organisation type<select name="type"><option>Central bank</option><option>Ministry or government</option><option>Bank or insurer</option><option>Accelerator or ecosystem</option><option>University or institute</option><option>Event or media</option><option>Other</option></select></label>' +
