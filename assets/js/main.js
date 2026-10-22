@@ -93,8 +93,8 @@ window.SITE = {
       var live = tw.children[2], i = 0;
       setTimeout(function type() {
         live.textContent = text.slice(0, ++i);
-        if (i < text.length) setTimeout(type, 26 + Math.random() * 30); else tw.classList.add("done");
-      }, 700);
+        if (i < text.length) setTimeout(type, 14 + Math.random() * 18); else tw.classList.add("done");
+      }, 350);
     }
   }
 
