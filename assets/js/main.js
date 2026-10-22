@@ -55,7 +55,7 @@ window.SITE = {
       '<div><h4>Work</h4><a href="services.html">Services</a><a href="frameworks.html">Frameworks</a><a href="impact.html">Impact &amp; proof</a></div>' +
       '<div><h4>Engage</h4><a href="speaking.html">Speaking</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>' +
       '<div><h4>Connect</h4><a href="' + S.linkedin + '" target="_blank" rel="noopener">LinkedIn</a><a href="contact.html#newsletter">Newsletter</a></div></div>' +
-      '<div class="legal"><span>© ' + new Date().getFullYear() + " Orakwe John. All rights reserved.</span><span>Lagos · Kigali · London · Riyadh</span></div></div>";
+      '<div class="legal"><span>© ' + new Date().getFullYear() + " Orakwe John. All rights reserved.</span><span>Based in Lagos · Working worldwide</span></div></div>";
   }
 
   document.querySelectorAll("[data-book]").forEach(function (a) {
@@ -102,7 +102,7 @@ window.SITE = {
   var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
   }, { threshold: 0.15 }) : null;
-  document.querySelectorAll(".reveal,.split").forEach(function (el) { io ? io.observe(el) : el.classList.add("in"); });
+  document.querySelectorAll(".reveal,.split,.ladder").forEach(function (el) { io ? io.observe(el) : el.classList.add("in"); });
 
   /* animated counters */
   function fmt(n) { return Math.round(n).toLocaleString("en-US"); }
@@ -130,7 +130,7 @@ window.SITE = {
   }
 
   /* enquiry form: no backend yet, so compose a structured brief */
-  var form = document.getElementById("enquiry");
+  var form = document.getElementById("enquiry-form");
   if (form) {
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
