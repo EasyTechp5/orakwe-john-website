@@ -390,3 +390,20 @@ textarea{min-height:140px;resize:vertical}
 .table tbody tr{transition:background .2s}
 .proof .cell b{background:linear-gradient(180deg,var(--blue-950),var(--blue-700));-webkit-background-clip:text;background-clip:text;color:transparent}
 .btn-primary:focus-visible,.btn-light:focus-visible{outline-offset:4px}
+
+/* photo strip + gallery */
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:start}
+.strip .photo{aspect-ratio:3/4.2}
+.strip .photo:nth-child(even){margin-top:36px}
+.strip .photo:nth-child(odd):nth-child(3){margin-top:-12px}
+.gallery.three .photo figcaption{font:500 .84rem var(--font-head)}
+@media (max-width:1020px){
+  .strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -20px;padding:0 20px 20px;-webkit-overflow-scrolling:touch}
+  .strip .photo{flex:0 0 66%;max-width:300px;scroll-snap-align:center;margin-top:0!important}
+}
+.photo.zoom img{transform:scale(1.7);transform-origin:50% 33%}
+.photo.zoom:hover img{transform:scale(1.76)}
+.photo.zoom-sm img{transform:scale(1.35);transform-origin:50% 45%}
+.photo.zoom-sm:hover img{transform:scale(1.4)}
+.photo.zoom img[src*="suit"]{transform-origin:50% 20%;transform:scale(1.55)}
+.photo.zoom:hover img[src*="suit"]{transform:scale(1.6)}
