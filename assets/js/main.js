@@ -32,7 +32,7 @@ window.SITE = {
   if (header) {
     header.className = "site-header" + (document.body.dataset.solid ? " solid" : "");
     header.innerHTML =
-      '<div class="wrap bar"><a class="brand" href="index.html" aria-label="Orakwe John home"><span class="mark">OJ</span>Orakwe John</a>' +
+      '<div class="wrap bar"><a class="brand" href="index.html" aria-label="Orakwe John home"><span class="mark"><img src="/assets/logo/mark.svg" alt="" width="38" height="38"></span>Orakwe John</a>' +
       '<button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
       '<nav class="nav" aria-label="Main">' +
       links.map(function (l) { return '<a href="' + l[0] + '"' + (path === l[0] ? ' class="active"' : "") + ">" + l[1] + "</a>"; }).join("") +
@@ -50,7 +50,7 @@ window.SITE = {
   if (footer) {
     footer.className = "site-footer";
     footer.innerHTML =
-      '<div class="wrap"><div class="cols"><div><a class="brand" href="index.html"><span class="mark">OJ</span>Orakwe John, MBA</a>' +
+      '<div class="wrap"><div class="cols"><div><a class="brand" href="index.html"><span class="mark"><img src="/assets/logo/mark.svg" alt="" width="38" height="38"></span>Orakwe John, MBA</a>' +
       "<p>AI Programs Lead and Global AI Advisor, Lagos, Nigeria. Executive AI programmes for central banks, ministries, banks and accelerators.</p></div>" +
       '<div><h4>Work</h4><a href="services.html">Services</a><a href="frameworks.html">Frameworks</a><a href="impact.html">Impact &amp; proof</a></div>' +
       '<div><h4>Engage</h4><a href="speaking.html">Speaking</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>' +
