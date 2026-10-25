@@ -407,3 +407,9 @@ textarea{min-height:140px;resize:vertical}
 .photo.zoom-sm:hover img{transform:scale(1.4)}
 .photo.zoom img[src*="suit"]{transform-origin:50% 20%;transform:scale(1.55)}
 .photo.zoom:hover img[src*="suit"]{transform:scale(1.6)}
+
+/* logo mark */
+.brand .mark{background:none;box-shadow:none;border-radius:11px;overflow:visible;filter:drop-shadow(0 8px 14px rgba(47,107,255,.55));transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.brand .mark img{width:100%;height:100%;display:block}
+.brand:hover .mark{transform:rotate(-6deg) scale(1.06)}
+.site-header.scrolled .brand .mark,.site-header.solid .brand .mark{filter:drop-shadow(0 6px 10px rgba(23,71,214,.35))}
