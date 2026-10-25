@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Orakwe John">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="58" y2="62" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5b8cff"/><stop offset=".55" stop-color="#1747d6"/><stop offset="1" stop-color="#071a6b"/></linearGradient>
+    <radialGradient id="gl" cx=".25" cy=".1" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <rect width="64" height="64" rx="16" fill="url(#gl)"/>
+  <g transform="translate(32 32) scale(.9) translate(-32 -33)">
+    <circle cx="20" cy="34" r="12.5" fill="none" stroke="#fff" stroke-width="6.5"/>
+    <circle cx="20" cy="34" r="4.2" fill="#c6f432"/>
+    <path d="M38 17H56M47 17V40A10 10 0 0 1 37 50" fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
