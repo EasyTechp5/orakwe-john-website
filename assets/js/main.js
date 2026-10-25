@@ -55,9 +55,23 @@ window.SITE = {
       '<div><h4>Work</h4><a href="services.html">Services</a><a href="frameworks.html">Frameworks</a><a href="impact.html">Impact &amp; proof</a></div>' +
       '<div><h4>Engage</h4><a href="speaking.html">Speaking</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>' +
       '<div><h4>Connect</h4><a href="' + S.linkedin + '" target="_blank" rel="noopener">LinkedIn</a><a href="contact.html#newsletter">Newsletter</a></div></div>' +
-      '<div class="legal"><span>© ' + new Date().getFullYear() + " Orakwe John. All rights reserved.</span><span>Based in Lagos · Working worldwide</span></div></div>";
+      '<div class="legal"><a class="totop" href="#" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:\'smooth\'});return false;">↑ Back to top</a><span>© ' + new Date().getFullYear() + " Orakwe John. All rights reserved.</span><span>Based in Lagos · Working worldwide</span></div></div>";
   }
 
+  document.querySelectorAll(".cta-band").forEach(function (b) {
+    if (b.querySelector(".cta-fig")) return;
+    var im = document.createElement("img");
+    im.className = "cta-fig"; im.src = "assets/img/portrait-cut.webp"; im.alt = ""; im.loading = "lazy"; im.width = 860; im.height = 1017;
+    b.appendChild(im);
+  });
+  if (!document.querySelector(".sticky-cta") && path !== "contact.html") {
+    var sc = document.createElement("a");
+    sc.className = "sticky-cta btn btn-primary"; sc.href = book; sc.textContent = "Book a discovery call →";
+    if (S.calendly) { sc.target = "_blank"; sc.rel = "noopener"; }
+    document.body.appendChild(sc);
+    var showSc = function () { sc.classList.toggle("show", scrollY > 600); };
+    addEventListener("scroll", showSc, { passive: true }); showSc();
+  }
   document.querySelectorAll("[data-book]").forEach(function (a) {
     a.setAttribute("href", book);
     if (S.calendly) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); }
